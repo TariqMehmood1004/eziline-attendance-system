@@ -1,6 +1,6 @@
-# android_attendance_system
+# Eziline Attendance Management System in Flutter App
 
-A new Flutter project.
+Android attendance system for students to keep track of their attendance status.
 
 ## Getting Started
 
