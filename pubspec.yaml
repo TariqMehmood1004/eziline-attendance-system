@@ -1,6 +1,6 @@
 name: android_attendance_system
-description: "Android attendance system for students to keep track of their attendance status."
-publish_to: 'none' 
+description: 'Android attendance system for students to keep track of their attendance status.'
+publish_to: 'none'
 
 version: 1.0.0+1
 
@@ -12,14 +12,26 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.6
+
+  # Firebase Packages
   firebase_core: ^2.26.0
   firebase_storage: ^11.6.8
+  firebase_auth: ^4.17.7
+  firebase_database: ^10.4.8
+  cloud_firestore: ^4.15.8
+
+  # Bloc Packages
   bloc: ^8.1.3
   flutter_bloc: ^8.1.4
   equatable: ^2.0.5
-  firebase_database: ^10.4.8
-  google_fonts: ^6.2.1
   get: ^4.6.6
+
+  # Fonts Packages
+  google_fonts: ^6.2.1
+
+  # Other Packages
+  image_picker: ^1.0.7
+
 
 dev_dependencies:
   flutter_test:
@@ -28,7 +40,6 @@ dev_dependencies:
   flutter_lints: ^3.0.0
 
 flutter:
-
   uses-material-design: true
 
   assets:

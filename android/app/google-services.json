@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "441019098845",
+    "project_id": "eziline-intership-projects",
+    "storage_bucket": "eziline-intership-projects.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441019098845:android:22491becf51700c6e75d34",
+        "android_client_info": {
+          "package_name": "com.example.android_attendance_system"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBwOClV9gqfLaasYBKo1n9rix66vE03Sg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
