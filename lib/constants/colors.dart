@@ -44,3 +44,6 @@ List<Color> kGradient = [
   const Color.fromARGB(0, 210, 210, 30),
   const Color.fromARGB(210, 210, 210, 30),
 ];
+
+const kBottomNavigationBarBgColor = Color(0XFF121315);
+const kBottomNavigationBarFgColor = Color(0XFF353539);

@@ -9,12 +9,14 @@ class TextFormFieldWidget extends StatelessWidget {
     required this.preIcon,
     required this.title,
     this.obscureText = false,
+    this.textInputType = TextInputType.text,
   }) : _emailController = emailController;
 
   final TextEditingController _emailController;
   final Widget preIcon;
   final String title;
   final bool obscureText;
+  final TextInputType textInputType;
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +27,7 @@ class TextFormFieldWidget extends StatelessWidget {
         borderRadius: BorderRadius.all(Radius.circular(8.0)),
       ),
       child: TextFormField(
+        keyboardType: textInputType,
         controller: _emailController,
         obscureText: obscureText,
         autofocus: false,
@@ -36,7 +39,7 @@ class TextFormFieldWidget extends StatelessWidget {
         },
         style: GoogleFonts.inter(
           textStyle: const TextStyle(
-            color: kText,
+            color: kgreyLight,
             fontSize: 13,
             fontWeight: FontWeight.w500,
           ),

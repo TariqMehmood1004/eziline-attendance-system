@@ -7,34 +7,40 @@ class MyButtonWidget extends StatelessWidget {
     required this.kWidth,
     required this.title,
     required this.onTap,
+    this.backgroundColor = kViolet,
+    this.foregroundColor = fg100,
+    this.fontSize = 16.0,
   });
 
   final double kWidth;
+  final double fontSize;
   final String title;
   final Function() onTap;
+  final Color backgroundColor;
+  final Color foregroundColor;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       borderRadius: BorderRadius.circular(8.0),
-      splashColor: kViolet,
-      highlightColor: kViolet,
-      focusColor: kViolet,
-      hoverColor: kViolet,
+      splashColor: backgroundColor,
+      highlightColor: backgroundColor,
+      focusColor: backgroundColor,
+      hoverColor: backgroundColor,
       onTap: onTap,
       child: Container(
         width: kWidth * 0.8,
         height: 47.0,
         alignment: Alignment.center,
-        decoration: const BoxDecoration(
-          color: kViolet,
-          borderRadius: BorderRadius.all(Radius.circular(8.0)),
+        decoration: BoxDecoration(
+          color: backgroundColor,
+          borderRadius: const BorderRadius.all(Radius.circular(8.0)),
         ),
         child: Text(
           title,
-          style: const TextStyle(
-            color: fg100,
-            fontSize: 16.0,
+          style: TextStyle(
+            color: foregroundColor,
+            fontSize: fontSize,
             fontWeight: FontWeight.w500,
           ),
         ),
