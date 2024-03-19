@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import '../../constants/constant_export.dart';
 import '../../widgets/widget_export.dart';
 
-class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key});
+class AdminProfileScreen extends StatelessWidget {
+  const AdminProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -46,8 +46,7 @@ class ProfileScreen extends StatelessWidget {
                                 children: [
                                   InkWell(
                                     onTap: () {
-                                      FirebaseService
-                                          .showImageSelectionDialog();
+                                      showToast("Feature unavailable for now!");
                                     },
                                     child: Container(
                                       decoration: const BoxDecoration(

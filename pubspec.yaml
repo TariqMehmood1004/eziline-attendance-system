@@ -31,6 +31,13 @@ dependencies:
 
   # Other Packages
   image_picker: ^1.0.7
+  uuid: ^4.3.3
+  fluttertoast: ^8.2.4
+  intl: ^0.19.0
+  path: ^1.9.0
+  compress_images_flutter: ^0.0.3+9
+  image: ^4.1.7
+  path_provider: ^2.1.2
 
 
 dev_dependencies:

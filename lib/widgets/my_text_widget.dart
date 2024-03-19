@@ -10,16 +10,19 @@ class MyTextWidget extends StatelessWidget {
     this.fontSize = 27,
     this.fontWeight = FontWeight.w500,
     this.color = kWhite,
+    this.issoftWrap = true,
   });
   final String title;
   final double fontSize;
   final FontWeight fontWeight;
   final Color color;
+  final bool issoftWrap;
 
   @override
   Widget build(BuildContext context) {
     return Text(
       title,
+      softWrap: issoftWrap,
       style: GoogleFonts.inter(
         fontSize: fontSize,
         fontWeight: fontWeight,

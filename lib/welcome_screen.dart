@@ -13,13 +13,6 @@ class WelcomeScreen extends StatelessWidget {
     return Scaffold(
       extendBody: true,
       extendBodyBehindAppBar: true,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: kbgLight,
-        elevation: 0.0,
-        shape: const CircleBorder(),
-        child: const Icon(Icons.arrow_forward, color: kBlack, size: 30.0),
-      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,

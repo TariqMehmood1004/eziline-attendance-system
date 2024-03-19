@@ -44,24 +44,23 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: const AssetImageWidget(
                     imagePath: "assets/images/signin.png"),
               ),
-              const Padding(
-                padding: EdgeInsets.all(20.0),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      MyTextWidget(
+                      const MyTextWidget(
                         title: "Welcome back!",
                         fontWeight: FontWeight.bold,
-                        color: kViolet,
-                        fontSize: 27.0,
+                        color: kText,
                       ),
-                      SizedBox(height: 12.0),
+                      const SizedBox(height: 12.0),
                       MyTextWidget(
                         title: "Log in to manage attendance effortlessly.",
                         fontWeight: FontWeight.w400,
                         fontSize: 14.0,
-                        color: kgreyLight,
+                        color: kGray.withOpacity(0.5),
                       ),
                     ]),
               ),
@@ -89,6 +88,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       MyButtonWidget(
                         kWidth: kWidth,
                         title: 'Log In',
+                        backgroundColor: Colors.green.withOpacity(0.8),
                         onTap: () {
                           if (_formKey.currentState!.validate()) {
                             BlocProvider.of<AuthBloc>(context).add(

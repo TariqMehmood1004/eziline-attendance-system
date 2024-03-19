@@ -43,5 +43,9 @@ class AuthBloc extends Bloc<AuthEvents, AuthStates> {
         emit(LoginFailureState(errorMessage: e.toString()));
       }
     });
+
+    on<LoggedOutEvent>((event, emit) {
+      emit(const LoginFailureState(errorMessage: "User logged out"));
+    });
   }
 }

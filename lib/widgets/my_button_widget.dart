@@ -10,6 +10,7 @@ class MyButtonWidget extends StatelessWidget {
     this.backgroundColor = kViolet,
     this.foregroundColor = fg100,
     this.fontSize = 16.0,
+    this.borderColor = kTransparent,
   });
 
   final double kWidth;
@@ -18,6 +19,7 @@ class MyButtonWidget extends StatelessWidget {
   final Function() onTap;
   final Color backgroundColor;
   final Color foregroundColor;
+  final Color borderColor;
 
   @override
   Widget build(BuildContext context) {
@@ -35,6 +37,7 @@ class MyButtonWidget extends StatelessWidget {
         decoration: BoxDecoration(
           color: backgroundColor,
           borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+          border: Border.all(color: borderColor, width: 1.0),
         ),
         child: Text(
           title,

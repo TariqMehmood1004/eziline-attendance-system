@@ -2,13 +2,10 @@
 
 import 'dart:developer';
 import 'package:android_attendance_system/constants/colors.dart';
-import 'package:android_attendance_system/services/firebase/firebase_services.dart';
 import 'package:android_attendance_system/widgets/widget_export.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:get/get.dart';
 import '../../../bloc/auth_bloc/auth_export.dart';
-import '../../ui_export.dart';
 
 class SignUpWithProfileScreen extends StatefulWidget {
   const SignUpWithProfileScreen({
@@ -30,9 +27,8 @@ class SignUpWithProfileScreen extends StatefulWidget {
 class _SignUpWithProfileScreenState extends State<SignUpWithProfileScreen> {
   final _formKey = GlobalKey<FormState>();
   final bool isLoading = false;
-  final String imageUrl =
-      "https://firebasestorage.googleapis.com/v0/b/eziline-intership-projects.appspot.com/o/avatar-anonymous-300x300.png?alt=media&token=58e38342-d66c-44f5-978c-3d00d69f1dde";
-
+  String imageUrl =
+      "https://img.freepik.com/free-vector/happy-young-man-smiling_24877-81914.jpg?t=st=1710735267~exp=1710738867~hmac=9d8f24a6cd11c9ea6f4cb564b04c9273dd5671a7fb25eff853300e2fa8b018eb&w=580";
   @override
   Widget build(BuildContext context) {
     log("email: ${widget.email}, \npassword: ${widget.password}, \nname: ${widget.name}");
@@ -76,9 +72,7 @@ class _SignUpWithProfileScreenState extends State<SignUpWithProfileScreen> {
                           clipBehavior: Clip.hardEdge,
                           elevation: 0.0,
                           child: InkWell(
-                            onTap: () {
-                              FirebaseService.uploadImageToStorage();
-                            },
+                            onTap: () => showToast("Coming soon"),
                             borderRadius: BorderRadius.circular(100),
                             child: isLoading
                                 ? Center(
@@ -88,7 +82,7 @@ class _SignUpWithProfileScreenState extends State<SignUpWithProfileScreen> {
                                       child: const CircularProgressIndicator(),
                                     ),
                                   )
-                                : Image.network(imageUrl),
+                                : Image.network(imageUrl, fit: BoxFit.cover),
                           ),
                         ),
                       ),
@@ -129,6 +123,7 @@ class _SignUpWithProfileScreenState extends State<SignUpWithProfileScreen> {
                             return MyButtonWidget(
                               kWidth: kWidth,
                               title: 'Sign Up',
+                              backgroundColor: Colors.green.withOpacity(0.8),
                               onTap: () async {
                                 if (_formKey.currentState!.validate()) {
                                   BlocProvider.of<AuthBloc>(context).add(
@@ -139,15 +134,6 @@ class _SignUpWithProfileScreenState extends State<SignUpWithProfileScreen> {
                                       imageUrl: imageUrl,
                                     ),
                                   );
-
-                                  if (state is SignUpSuccessState) {
-                                    Get.to(() => const HomeScreen());
-                                  } else {
-                                    snackBarWidget(
-                                      context: context,
-                                      title: state.toString(),
-                                    );
-                                  }
                                 }
                               },
                             );

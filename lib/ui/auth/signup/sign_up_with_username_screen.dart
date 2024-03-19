@@ -91,6 +91,7 @@ class _SignUpWithUserNameScreenState extends State<SignUpWithUserNameScreen> {
                       MyButtonWidget(
                         kWidth: kWidth,
                         title: 'Next',
+                        backgroundColor: Colors.green.withOpacity(0.8),
                         onTap: () {
                           if (_formKey.currentState!.validate()) {
                             Get.to(() => SignUpWithProfileScreen(
