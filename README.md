@@ -4,7 +4,7 @@ Android attendance system for students to keep track of their attendance status.
 
 ### Attendance Management System
 
-#### User panel:
+#### User panel (email: johnbrrighte7427206@gmail.com && password: Tariq@4848783):
 - Registration and login functionality.
 - Three buttons: "Mark Attendance," "Mark Leave," and "View."
 - "Mark Attendance" allows students to mark themselves as present.
@@ -13,7 +13,7 @@ Android attendance system for students to keep track of their attendance status.
 - Option to edit the profile picture.
 - Ability to send leave requests to the admin.
 
-#### Admin panel:
+#### Admin panel (email: Admin@gmail.com && password: Admin@4848783):
 - Login functionality for the admin.
 - View all records of logged-in students.
 - Edit, add, and delete student attendance records.
@@ -21,3 +21,5 @@ Android attendance system for students to keep track of their attendance status.
 - Leave approval module with a proper count of leaves, presents, and absences.
 - Generate a complete system report for all attendances for a specific period (FROM and TO dates).
 - Add a grading system where users with a certain attendance count receive a specific grade (e.g., 26 days = A grade, 10 days = D grade, etc.) in the admin panel.
+
+
