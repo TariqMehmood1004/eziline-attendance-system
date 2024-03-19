@@ -13,7 +13,7 @@ Android attendance system for students to keep track of their attendance status.
 - Option to edit the profile picture.
 - Ability to send leave requests to the admin.
 
-#### Admin panel (email: Admin@gmail.com && password: Admin@4848783):
+#### Admin panel (email: admin2@gmail.com && password: Admin@4848783):
 - Login functionality for the admin.
 - View all records of logged-in students.
 - Edit, add, and delete student attendance records.

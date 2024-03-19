@@ -46,7 +46,8 @@ class AdminProfileScreen extends StatelessWidget {
                                 children: [
                                   InkWell(
                                     onTap: () {
-                                      showToast("Feature unavailable for now!");
+                                      FirebaseService
+                                          .showImageSelectionDialog();
                                     },
                                     child: Container(
                                       decoration: const BoxDecoration(
